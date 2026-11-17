@@ -1,1 +1,397 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dechen | Learn French</title>
+
+  <style>
+    :root {
+      --navy: #182B45;
+      --teal: #3A9D9A;
+      --mist: #E8EEF5;
+      --white: #F5F7FA;
+      --gold: #F2C66D;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--white);
+      color: var(--navy);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--navy);
+      color: white;
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    header h1 {
+      font-size: 30px;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 75px 20px;
+      background: var(--mist);
+    }
+
+    .hero h2 {
+      font-size: clamp(30px, 5vw, 45px);
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      margin-bottom: 25px;
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--teal);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .button:hover {
+      opacity: 0.85;
+    }
+
+    section {
+      padding: 50px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px 20px;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 3px 12px #182B4512;
+    }
+
+    .card .emoji {
+      font-size: 42px;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+    }
+
+    .activity {
+      background: white;
+      padding: 25px;
+      border-radius: 14px;
+      max-width: 650px;
+      margin: auto;
+      box-shadow: 0 3px 12px #182B4512;
+    }
+
+    .activity button {
+      margin: 8px 5px 0 0;
+    }
+
+    .option {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      padding: 12px;
+      background: var(--mist);
+      border: 1px solid transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: left;
+      color: var(--navy);
+      font-size: 16px;
+    }
+
+    .option:hover {
+      border-color: var(--teal);
+    }
+
+    #feedback {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .ai-box {
+      background: var(--navy);
+      color: white;
+      border-radius: 14px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    footer {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      section {
+        padding: 35px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>🌸 DECHEN</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#quiz">Quiz</a>
+    <a href="#grammar">Grammar</a>
+    <a href="#listening">Listening</a>
+    <a href="#speaking">Speaking</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="hero" id="home">
+    <h2>Bonjour les amis ! 👋</h2>
+    <p>Learn French. Have fun. Grow!</p>
+    <p>Welcome to your French learning adventure.</p>
+    <a href="#activities" class="button">Start Learning</a>
+  </div>
+
+  <section id="activities">
+    <h2 class="section-title">Explore and Learn ✨</h2>
+
+    <div class="cards">
+      <div class="card">
+        <div class="emoji">🎯</div>
+        <h3>Quiz</h3>
+        <p>Test your French knowledge!</p>
+        <a href="#quiz" class="button">Play</a>
+      </div>
+
+      <div class="card">
+        <div class="emoji">📚</div>
+        <h3>Grammar</h3>
+        <p>Discover French grammar.</p>
+        <a href="#grammar" class="button">Learn</a>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🎧</div>
+        <h3>Listening</h3>
+        <p>Listen and understand French.</p>
+        <a href="#listening" class="button">Listen</a>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🗣️</div>
+        <h3>Speaking</h3>
+        <p>Practise speaking French.</p>
+        <a href="#speaking" class="button">Speak</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="quiz">
+    <h2 class="section-title">🎯 Let's Play a Quiz!</h2>
+
+    <div class="activity">
+      <h3>Question 1</h3>
+      <p>Comment dit-on "Hello" en français ?</p>
+
+      <button class="option" onclick="checkAnswer(false)">
+        A. Merci
+      </button>
+
+      <button class="option" onclick="checkAnswer(true)">
+        B. Bonjour
+      </button>
+
+      <button class="option" onclick="checkAnswer(false)">
+        C. Au revoir
+      </button>
+
+      <p id="feedback" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section id="grammar">
+    <h2 class="section-title">📚 Grammar Corner</h2>
+
+    <div class="activity">
+      <h3>Le verbe ÊTRE</h3>
+      <p>Je suis – Tu es – Il/Elle est</p>
+      <p>Nous sommes – Vous êtes – Ils/Elles sont</p>
+
+      <h3 style="margin-top:20px;">Complete the sentence:</h3>
+      <p>Je _____ un élève.</p>
+
+      <button class="button" onclick="grammarAnswer('suis')">
+        suis
+      </button>
+
+      <button class="button" onclick="grammarAnswer('es')">
+        es
+      </button>
+
+      <p id="grammarFeedback" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section id="listening">
+    <h2 class="section-title">🎧 Listening Exercises</h2>
+
+    <div class="activity">
+      <h3>Listen to the French sentence</h3>
+      <p>Bonjour ! Je m'appelle Marie. J'ai onze ans.</p>
+
+      <button class="button" onclick="listenText()">
+        ▶ Listen
+      </button>
+      <p style="margin-top:15px;">
+        What is the girl's name?
+      </p>
+      <button class="button" onclick="listenAnswer()">
+        Show answer
+      </button>
+      <p id="listenFeedback" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section id="speaking">
+    <h2 class="section-title">🗣️ Speaking Exercises</h2>
+
+    <div class="activity">
+      <h3>Introduce yourself!</h3>
+      <p>Try to answer these questions in French:</p>
+      <ul style="margin:15px 0 15px 25px;">
+        <li>Comment tu t'appelles ?</li>
+        <li>Quel âge as-tu ?</li>
+        <li>Où habites-tu ?</li>
+        <li>Quelle est ta couleur préférée ?</li>
+      </ul>
+      <p>Speak aloud and practise with confidence! ⭐</p>
+    </div>
+  </section>
+
+  <section id="assistant">
+    <div class="ai-box">
+      <h2>🤖 My French Learning Assistant</h2>
+      <p>Need help with French? Your AI learning friend will be here soon!</p>
+      <p style="margin-top:12px;">Ask questions, practise and discover!</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>🌸 DECHEN – My French Learning Space</p>
+  <p>Learn a little French every day!</p>
+</footer>
+
+<script>
+  function checkAnswer(correct) {
+    const feedback = document.getElementById("feedback");
+
+    if (correct) {
+      feedback.textContent = "Bravo ! 🎉 Excellent work!";
+      feedback.style.color = "#27834D";
+    } else {
+      feedback.textContent = "Try again! You can do it! 😊";
+      feedback.style.color = "#B45335";
+    }
+  }
+
+  function grammarAnswer(answer) {
+    const feedback = document.getElementById("grammarFeedback");
+
+    if (answer === "suis") {
+      feedback.textContent = "Très bien ! Je suis un élève. ⭐";
+      feedback.style.color = "#27834D";
+    } else {
+      feedback.textContent = "Pas encore ! Think about 'Je'. Try again!";
+      feedback.style.color = "#B45335";
+    }
+  }
+
+  function listenText() {
+    if (!("speechSynthesis" in window)) {
+      document.getElementById("listenFeedback").textContent =
+        "Audio playback is not supported by this browser.";
+      return;
+    }
+
+    speechSynthesis.cancel();
+    const speech = new SpeechSynthesisUtterance(
+      "Bonjour ! Je m'appelle Marie. J'ai onze ans."
+    );
+
+    speech.lang = "fr-FR";
+    speech.rate = 0.8;
+    speechSynthesis.speak(speech);
+  }
+
+  function listenAnswer() {
+    document.getElementById("listenFeedback").textContent =
+      "La réponse est Marie ! Bravo pour ton écoute.";
+  }
+</script>
+
+</body>
+</html>
+
